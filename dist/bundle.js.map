@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","sources":["../src/dependency.js"],"sourcesContent":["export default 'hello dependency';\n"],"names":[],"mappings":"2LAAe"}
