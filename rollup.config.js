@@ -7,7 +7,7 @@ import pkg from './package.json';
 export default {
   input: 'src/index.js',
   output: {
-    file: 'dist/bundle.js',
+    file: pkg.main,
     name: 'MyLibrary',
     format: 'umd',
     sourcemap: true,
@@ -22,5 +22,5 @@ export default {
     babel({ exclude: ['node_modules/**'] }),
     process.env.NODE_ENV === 'production' && uglify(),
   ],
-  external: Object.keys(pkg.dependencies || []),
+  external: Object.keys(pkg.dependencies || {}),
 };
